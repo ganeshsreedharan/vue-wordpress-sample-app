@@ -1,3 +1,4 @@
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 # VUE SAMPLE APP Consuming the  Wordpress apis
 
 ![alt text](https://github.com/ganeshsreedharan/vue-wordpress-sample-app/blob/master/Screenshot.png)
