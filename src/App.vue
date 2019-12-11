@@ -1,28 +1,47 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!--contents area-->
+    <vue-topprogress ref="topProgress"></vue-topprogress>
+    <!-- Header Component-->
+    <HeaderComponent></HeaderComponent>
+    <!-- Loading content dynamically here-->
+    <router-view></router-view>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderComponent from "./components/HeaderComponent.vue";
+import jQuery from "jquery";
+import PopperJs from "popper.js";
+import "bootstrap";
+import { vueTopprogress } from "vue-top-progress";
+
+//Before initialising jQuery the  bootstrap was loading and Jquery was not defined
+//so I have made it imorted dynamically
+const getBootstrap = () => import("bootstrap-material-design");
+global.jQuery = window.jQuery = window.$ = jQuery;
+window.jQuery = jQuery;
+global.Popper = window.Popper = PopperJs;
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    HeaderComponent,
+    vueTopprogress
+  },
+  created() {
+    //loading material bootstrap dynamically
+    getBootstrap().then(m => {
+      m.default;
+      window.jQuery("body").bootstrapMaterialDesign();
+    });
+  },
+  mounted() {
+    
+     setTimeout(() => {
+      this.$refs.topProgress.done();
+     }, 2000); 
   }
-}
+};
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
