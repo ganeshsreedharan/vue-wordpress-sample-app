@@ -1,4 +1,4 @@
-# trucaller-blog
+# VUE SAMPLE APP Consuming the  Wordpress apis
 
 ## Project setup
 ```
