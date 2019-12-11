@@ -1,5 +1,7 @@
 # VUE SAMPLE APP Consuming the  Wordpress apis
 
+![alt text](https://github.com/ganeshsreedharan/vue-wordpress-sample-app/blob/master/Screenshot.png)
+
 ## Project setup
 ```
 npm install
