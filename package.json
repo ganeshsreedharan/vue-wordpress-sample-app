@@ -14,7 +14,7 @@
     "bootstrap-material-design": "^4.0.0",
     "core-js": "^3.4.3",
     "express": "^4.17.1",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "popper.js": "^1.16.0",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.5",
