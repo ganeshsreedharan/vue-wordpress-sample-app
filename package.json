@@ -18,7 +18,7 @@
     "popper.js": "^1.16.0",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.5",
-    "vue-moment": "^4.0.0",
+    "vue-moment": "^4.1.0",
     "vue-router": "^3.1.3",
     "vue-top-progress": "^0.7.0",
     "vuex": "^3.1.2"
